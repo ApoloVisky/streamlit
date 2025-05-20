@@ -382,13 +382,7 @@ if check_password():
         
         col1, col2 = st.columns([6, 1])
         with col2:
-            if st.button("Enviar", key="send_button", type="secondary", use_container_width=True):
-                if user_input.strip():
+            if st.button("Enviar", key="send_button", use_container_width=True):
+                if st.session_state.user_input and st.session_state.user_input.strip():
                     handle_message()
-            st.markdown("""
-                    <style>
-                        textarea[aria-label="Mensagem"] {
-                        resize: none !important;
-                        }
-                        </style>
-                            """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
