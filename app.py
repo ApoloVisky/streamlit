@@ -375,7 +375,7 @@ if check_password():
                 "Mensagem", 
                 value=" ",  
                 placeholder="Digite sua mensagem aqui...", 
-                key=st.session_state.get('text_area_key', 'user_input'), 
+                key="user_input", 
                 height=70, 
                 label_visibility="collapsed"
 )
